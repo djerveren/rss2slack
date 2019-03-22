@@ -11,7 +11,7 @@ an RSS feed gets updated. Requires the [*Incoming
 Webhooks*](https://api.slack.com/incoming-webhooks)
  integration to be enabled for Slack.
 
-The plugin is written in Perl and requires modules:
+The plugin is written in Perl and requires the following modules:
 * JSON
 * XML::XPath
 * Getopt::Long
@@ -20,11 +20,12 @@ The plugin is written in Perl and requires modules:
 * HTTP::Request::Common
 
 While this plugin is written with Nagios in mind, it can
-of course be scheduled from crontab or whatever scheduler
-you wish, as long as the script executes on the target platform.
+of course run as a stand-alone script from crontab or
+whatever scheduler you prefer, as long as the script 
+executes properly on the target platform.
 
-Usage:
-------
+Example usage:
+--------------
 ```bash
 ./rss2slack.pl \
     --cache-file=/var/tmp/nagios/rss2slack.dat \
